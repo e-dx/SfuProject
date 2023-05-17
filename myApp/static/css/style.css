@@ -1,0 +1,72 @@
+.block-1
+{
+	background-image: url("/static/images/block-1.jpg");
+	background-size: cover;
+	background-repeat-x: no-repeat;
+	background-repeat-y: no-repeat;
+	background-position: center;
+	height: 1000px;
+}
+
+.headlogo
+{
+	padding-top: 15%;
+}
+
+.warehouse
+{
+	background-color: #fcfcfc;
+}
+
+.contacts
+{
+	background-color: #fcfcfc;
+}
+.contacts .card
+{
+	border: 0px !important;
+	border-bottom: 1px solid rgb(0, 0, 0, 0.1) !important;
+	border-radius: 0px;
+	background-color: #fcfcfc;
+}
+.contacts .card-body
+{
+	padding-top: 0px;
+}
+.contacts img
+{
+	box-shadow: -5px 2px 20px 0px rgba(221, 221, 221, 1);
+}
+
+.contacts textarea
+{
+	max-height: 150px !important;
+}
+
+.contacts textarea, input
+{
+	border: 0px !important;
+	border-top: 1px solid rgb(0, 0, 0, 0.1) !important;
+	border-radius: 0px !important;
+}
+
+.contacts button
+{
+	background-color: #fafafa;
+	border-radius: 0px !important;
+	border: 0px !important;
+	box-shadow: 1px 2px 20px -9px rgba(221, 221, 221, 1);
+}
+.contacts button:hover
+{
+	background-color: rgba(221, 221, 221, 0.3);
+	transition: .3s;
+	border-radius: 0px !important;
+	border: 0px !important;
+}
+.contacts button:active
+{
+	background-color: rgba(221, 221, 221, 0.3);
+	border-radius: 0px !important;
+	border: 0px !important;
+}

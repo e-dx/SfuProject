@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <title>Контакты</title>
+  
+  <div class="container-fluid contacts py-5">
+    <div class="row py-5 mx-5 justify-content-center">
+      <div class="col-12">
+        <h1 class="display-5 text-center">Связаться с Нами</h1>
+
+        <div class="card mb-3 mt-5 mx-auto" style="max-width: 750px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{% static 'images/contact-card.png' %}" class="img-fluid" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <form id="contact_form" name="contact_form" method="post">
+                  <div class="mb-5">
+                    <label for="message">Сообщение</label>
+                      <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+                  </div>
+                  <div class="mb-5 row">
+                    <div class="col">
+                      <label>Как к Вам обращаться?</label>
+                        <input type="text" required maxlength="50" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="col">
+                      <label for="email_addr">Ваш e-mail:</label>
+                        <input type="email" required maxlength="50" class="form-control" id="email_addr" name="email" placeholder="name@example.com">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn">Отправить!</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <h1 class="display-6 text-center">Мы на карте:</h1>
+          
+          <div class="container text-center overflow-auto">
+            <p>г. Красноярск, проспект Свободный, 79</p>
+            <img src="{% static 'images/map.png' %}" alt="СФУ">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <title>Товары</title>
+  
+  <div class="container-fluid warehouse py-5">
+    <div class="flex-row py-5 mx-5">
+      <div class="col-12 text-center">
+        <h1 class="display-5">Наш ассортимент</h1>
+      </div>
+      <div class="col-12 py-5">
+        <table class="table table-striped">
+          <th>№</th>
+          <th>Наименование</th>
+          <th>Описание</th>
+          {% for product in products %}
+          <tr>
+            <td>{{product.id}}</td>
+            <td>{{product.title}}</td>
+            <td>{{product.description}}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">
+        Добавить товар
+      </button>
+      
+      <div class="modal fade" id="addProduct">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content rounded-4 shadow">
+            <div class="modal-header p-5 pb-4 border-bottom-0">
+              <h1 class="fw-bold mb-0 fs-2">Добавить новый товар</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+
+            <div class="modal-body p-5 pt-0">
+              <form action="" method="post">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+                
+                <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Сохранить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

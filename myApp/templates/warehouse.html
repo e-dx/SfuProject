@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <title>Склад</title>
+  
+  <div class="container-fluid warehouse py-5">
+    <div class="flex-row py-5 mx-5">
+      <div class="col-12 text-center">
+        <h1 class="display-5">Товар на складе</h1>
+      </div>
+      <div class="col-12 py-5">
+        <table class="table table-striped">
+          <th>№</th>
+          <th>Наименование</th>
+          <th>Описание</th>
+          <th>Поставщик</th>
+          <th>Дата поставки</th>
+          <th>В наличии, шт.</th>
+          {% for item in wh %}
+          <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.product.title}}</td>
+            <td>{{item.product.description}}</td>
+            <td>{{item.vendor.title}}</td>
+            <td>{{item.deliveryDate}}</td>
+            <td>{{item.productCountOnWh}}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
