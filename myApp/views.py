@@ -58,6 +58,11 @@ def products(request):
             
     return render(request, url, {"products":Product.objects.all(), "form":AddProduct()})
 
+def trades(request):
+    url = 'trades.html'
+            
+    return render(request, url, {"trades":Trade.objects.all(), "form":AddProduct()})
+
 def press(request):
     url = 'press.html'
 

@@ -10,5 +10,6 @@ urlpatterns = [
     path('warehouse/', views.warehouse),
     path('products/', views.products),
     path('press/', views.press),
-    path('vendors/', views.vendors)
+    path('vendors/', views.vendors),
+    path('trades/', views.trades)
 ]

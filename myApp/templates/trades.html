@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <title>Сделки</title>
+  
+  <div class="container-fluid warehouse py-5">
+    <div class="flex-row py-5 mx-5">
+      <div class="col-12 text-center">
+        <h1 class="display-5">Недавние продажи</h1>
+      </div>
+      <div class="col-12 py-5">
+        <table class="table table-striped">
+          <th>№</th>
+          <th>Дата</th>
+          <th>Товар</th>
+          <th>Количество</th>
+          <th>Цена</th>
+          <th>Общая цена</th>
+          <th>Менеджер</th>
+          {% for trade in trades %}
+          <tr>
+            <td>{{trade.id}}</td>
+            <td>{{trade.date}}</td>
+            <td>{{trade.product}}</td>
+            <td>{{trade.count}}</td>
+            <td>{{trade.costPerOne}}</td>
+            <td>{{trade.manager}}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
