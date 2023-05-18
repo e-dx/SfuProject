@@ -9,3 +9,4 @@ class AuthorAdmin(admin.ModelAdmin):
 admin.site.register(Product)
 admin.site.register(Vendor)
 admin.site.register(Warehouse)
+admin.site.register(Trade)
